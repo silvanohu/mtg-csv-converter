@@ -22,7 +22,7 @@ def parse_sheet(file):
             output += "\n" + str(row.iloc[6]) + ","
 
             # The name of the card
-            output += row.iloc[4] + ","
+            output += '"' + row.iloc[4] + '",'
 
             # The edition of the card
             output += row.iloc[3] + ","
