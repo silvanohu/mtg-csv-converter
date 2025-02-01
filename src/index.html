@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mtg Csv Converter</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body onload="init()">
+<h1>Mtg Csv Converter</h1>
+<p>Upload your Excel file, and get a downloadable CSV file as the result.</p>
+<input id="fileInput" type="file" accept=".xlsx,.xls" />
+<button id="convertButton">Convert to CSV</button>
+<pre id="output"></pre>
+</body>
+
+</html>
