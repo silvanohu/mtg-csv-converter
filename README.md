@@ -5,13 +5,12 @@
 - [Introduction](#introduction)
 - [Features](#features)
   - [CardTrader to Moxfield](#cardtrader-to-moxfield)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
 # Introduction
 
-This is a simple Python application that converts the 
+This is a simple static web page that converts the 
 files used by various Magic: The Gathering collection 
 trackers to other formats.
 
@@ -30,16 +29,11 @@ This way, everytime you order some cards on CardTrader, you
 can easily import the list of your new cards into your 
 Moxfield collection with a single import.
 
-# Installation
-The application is a simple Python script, so all you need 
-to do is to download the repository in your preferred way.
-
-The only dependency you need is the `pandas` library.
-
 # Usage
-To use the application run the `app.py` file and paste the 
-path of the `.xls` file containing the cards' details, a 
-`.csv` file will be created.
+1. Access the application using this link: https://silvanohu.github.io/mtg-csv-converter/
+2. Upload the Excel file
+3. Convert the contents to CSV
+4. Download the CSV using the link at the bottom of the page
 
 # Contributing
 Feel free to contribute in any way!
