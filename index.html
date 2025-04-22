@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mtg Csv Converter</title>
+  <title>MTG CSV Converter</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="index.js" defer></script>
 </head>
 
-<body onload="init()">
-<h1>Mtg Csv Converter</h1>
-<p>Upload your Excel file, and get a downloadable CSV file as the result.</p>
-<input id="fileInput" type="file" accept=".xlsx,.xls" />
-<button id="convertButton">Convert to CSV</button>
-<pre id="output"></pre>
-</body>
+<body>
+<div class="container">
+  <h1>MTG CSV Converter</h1>
+  <p class="subtitle">Convert your Magic: The Gathering Excel files to CSV format</p>
 
+  <div class="upload-area" id="uploadArea">
+    <div class="upload-icon">📁</div>
+    <p>Drag & drop your Excel file here or</p>
+    <button class="btn" id="browseButton">Browse Files</button>
+    <p class="format-hint">Supported formats: .xlsx, .xls</p>
+    <input type="file" id="fileInput" class="file-input" accept=".xlsx,.xls" />
+  </div>
+
+  <div class="file-info" id="fileInfo">
+    <div class="file-name" id="fileName"></div>
+    <div class="file-size" id="fileSize"></div>
+  </div>
+
+  <div class="btn-container">
+    <button class="btn" id="convertButton" disabled>Convert to CSV</button>
+    <button class="btn download-btn" id="downloadButton">Download CSV</button>
+  </div>
+
+  <div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <div class="success-message" id="successMessage">
+    Conversion successful! Your CSV file is ready to download.
+  </div>
+
+  <div class="error-message" id="errorMessage"></div>
+
+  <pre id="output"></pre>
+</div>
+</body>
 </html>
